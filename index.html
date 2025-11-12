@@ -50,7 +50,7 @@
         }
         
         .timeline-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             gap: 30px;
@@ -211,7 +211,7 @@
         .group-header {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             position: relative;
             z-index: 2;
         }
@@ -567,7 +567,7 @@
             background: white;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
+            max-width: 700px;
             width: 90%;
             max-height: 80vh;
             overflow-y: auto;
@@ -618,10 +618,38 @@
             font-weight: 600;
             color: var(--dark);
             margin-bottom: 5px;
+            font-size: 14px;
         }
         
         .detail-value {
             color: #555;
+            font-size: 14px;
+        }
+        
+        .json-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+        
+        .json-key {
+            color: #e74c3c;
+        }
+        
+        .json-string {
+            color: #2ecc71;
+        }
+        
+        .json-number {
+            color: #3498db;
+        }
+        
+        .json-boolean {
+            color: #9b59b6;
         }
         
         .modal-footer {
@@ -699,7 +727,7 @@
     </div>
     
     <div class="timeline-container">
-        <div class="progress-section">
+   <!--      <div class="progress-section">
             <div class="progress-header">
                 <h2>Log Progress</h2>
                 <p>Track your log's journey</p>
@@ -744,7 +772,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <div class="timeline-section">
             <div class="vertical-timeline">
@@ -779,7 +807,7 @@
                         <!-- Step 2: Consent Request -->
                         <div class="timeline-step completed" data-step="2">
                             <div class="step-indicator">
-                                <i class="bi bi-check-lg"></i>
+                                <i class="bi bi-envelope-check-fill"></i>
                             </div>
                             <div class="step-content">
                                 <div class="step-header">
@@ -797,7 +825,7 @@
                         <!-- Step 3: Confirming Lead Consent -->
                         <div class="timeline-step failed" data-step="3">
                             <div class="step-indicator">
-                                <i class="bi bi-x-lg"></i>
+                                <i class="bi bi-envelope-exclamation-fill"></i>
                             </div>
                             <div class="step-content">
                                 <div class="step-header">
@@ -842,25 +870,6 @@
                             </div>
                         </div>
                         
-                        <!-- Detailed Payment Negotiation Steps -->
-                        <!-- Step 5: Payment Negotiator Link 
-                        <div class="timeline-step completed" data-step="5">
-                            <div class="step-indicator">
-                                <i class="bi bi-check-lg"></i>
-                            </div>
-                            <div class="step-content">
-                                <div class="step-header">
-                                    <h5 class="step-title">Payment Negotiator Link to Lead Email</h5>
-                                    <span class="step-time">11:40 AM (IST)</span>
-                                </div>
-                                <span class="step-status status-completed">Completed</span>
-                                <p class="step-details">Payment negotiator link successfully sent to lead</p>
-                                <div class="step-actions">
-                                    <button class="btn btn-view" data-step="5">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        
                         <!-- Step 6: PN Link Verified -->
                         <div class="timeline-step completed" data-step="6">
                             <div class="step-indicator">
@@ -893,24 +902,6 @@
                                 <p class="step-details">Lead has been verified as eligible for payment negotiation</p>
                                 <div class="step-actions">
                                     <button class="btn btn-view" data-step="7">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 8: PN In-Progress - Lead Unmatched 
-                        <div class="timeline-step completed" data-step="8">
-                            <div class="step-indicator">
-                                <i class="bi bi-check-lg"></i>
-                            </div>
-                            <div class="step-content">
-                                <div class="step-header">
-                                    <h5 class="step-title">PN In-Progress - Lead Unmatched</h5>
-                                    <span class="step-time">11:46 AM (IST)</span>
-                                </div>
-                                <span class="step-status status-completed">Completed</span>
-                                <p class="step-details">Lead has been processed through initial matching algorithm</p>
-                                <div class="step-actions">
-                                    <button class="btn btn-view" data-step="8">View Details</button>
                                 </div>
                             </div>
                         </div>
@@ -1008,21 +999,6 @@
                             </div>
                         </div>
                         
-                        <!-- Step 14: LMS Under Review 
-                        <div class="timeline-step pending" data-step="14">
-                            <div class="step-indicator">
-                                <i class="bi bi-clock"></i>
-                            </div>
-                            <div class="step-content">
-                                <div class="step-header">
-                                    <h5 class="step-title">LMS Under Review</h5>
-                                    <span class="step-time">Pending</span>
-                                </div>
-                                <span class="step-status status-pending">Pending</span>
-                                <p class="step-details">Lead will be reviewed by LMS team after successful submission</p>
-                            </div>
-                        </div>-->
-                        
                         <!-- Step 15: LMS Approved -->
                         <div class="timeline-step pending" data-step="15">
                             <div class="step-indicator">
@@ -1037,36 +1013,6 @@
                                 <p class="step-details">Lead will be approved by LMS after successful review</p>
                             </div>
                         </div>
-                        
-                        <!-- Step 16: LMS Rejected
-                        <div class="timeline-step pending" data-step="16">
-                            <div class="step-indicator">
-                                <i class="bi bi-clock"></i>
-                            </div>
-                            <div class="step-content">
-                                <div class="step-header">
-                                    <h5 class="step-title">LMS Rejected</h5>
-                                    <span class="step-time">Pending</span>
-                                </div>
-                                <span class="step-status status-pending">Pending</span>
-                                <p class="step-details">Lead might be rejected by the LMS based on criteria</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 17: Amount Disbursed 
-                        <div class="timeline-step pending" data-step="17">
-                            <div class="step-indicator">
-                                <i class="bi bi-clock"></i>
-                            </div>
-                            <div class="step-content">
-                                <div class="step-header">
-                                    <h5 class="step-title">Amount Disbursed</h5>
-                                    <span class="step-time">Pending</span>
-                                </div>
-                                <span class="step-status status-pending">Pending</span>
-                                <p class="step-details">Loan amount will be disbursed after LMS approval</p>
-                            </div>
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -1140,28 +1086,18 @@
                     { label: "Interest Rate", value: "7.5%" }
                 ]
             },
-            5: {
-                title: "Payment Negotiator Link to Lead Email",
-                status: "Completed",
-                time: "11:40 AM (IST)",
-                details: "Payment negotiator link successfully sent to lead",
-                additionalInfo: [
-                    { label: "Email Type", value: "Negotiator Link" },
-                    { label: "Recipient", value: "lead@example.com" },
-                    { label: "Delivery Status", value: "Delivered" },
-                    { label: "Link Expiry", value: "48 hours" }
-                ]
-            },
             6: {
                 title: "PN In-Progress - Link Verified",
                 status: "Completed",
                 time: "11:44 AM (IST)",
                 details: "Payment negotiation link has been verified by the lead",
                 additionalInfo: [
-                    { label: "Verification Method", value: "Email Link" },
-                    { label: "Verified By", value: "Lead (Customer)" },
-                    { label: "Device", value: "Mobile" },
-                    { label: "IP Address", value: "192.168.1.105" }
+                    { label: "Type", value: "Page-verify" },
+                    { label: "Message", value: "PN Link Verified" },
+                    { label: "Request", value: '{\n  id: "ae1c0f6b5f05cad9127c2b87d73e527bcba72a701fef1f308555ac5209fa3038"\n}', isJson: true },
+                    { label: "Response", value: '{\n  firstname: "Mark \\t",\n  lastname: "Hall",\n  leadId: "ae1c0f6b5f05cad9127c2b87d73e527bcba72a701fef1f308555ac5209fa3038",\n  verify: "yes"\n}', isJson: true },
+                    { label: "Created On", value: "11/11/2025 11:44 AM (IST)" },
+                    { label: "Last Updated On", value: "11/11/2025 11:44 AM (IST)" }
                 ]
             },
             7: {
@@ -1173,18 +1109,6 @@
                     { label: "Eligibility Criteria", value: "Credit Score > 650" },
                     { label: "Verified By", value: "System Automation" },
                     { label: "Score", value: "720" },
-                    { label: "Next Step", value: "Lead Matching" }
-                ]
-            },
-            8: {
-                title: "PN In-Progress - Lead Unmatched",
-                status: "Completed",
-                time: "11:46 AM (IST)",
-                details: "Lead has been processed through initial matching algorithm",
-                additionalInfo: [
-                    { label: "Matching Algorithm", value: "Version 2.1" },
-                    { label: "Match Score", value: "78%" },
-                    { label: "Potential Lenders", value: "5" },
                     { label: "Next Step", value: "Lead Matching" }
                 ]
             },
@@ -1246,17 +1170,6 @@
                     { label: "Processing Time", value: "1-2 business days" }
                 ]
             },
-            14: {
-                title: "LMS Under Review",
-                status: "Pending",
-                time: "Pending",
-                details: "Lead will be reviewed by LMS team after successful submission",
-                additionalInfo: [
-                    { label: "Review Team", value: "Credit Analysis Department" },
-                    { label: "Review Criteria", value: "Credit Score, Income, Documents" },
-                    { label: "Expected Timeline", value: "2-3 business days" }
-                ]
-            },
             15: {
                 title: "LMS Approved",
                 status: "Pending",
@@ -1267,30 +1180,20 @@
                     { label: "Required Documents", value: "Income Proof, ID, Address" },
                     { label: "Expected Timeline", value: "3-5 business days" }
                 ]
-            },
-            16: {
-                title: "LMS Rejected",
-                status: "Pending",
-                time: "Pending",
-                details: "Lead might be rejected by the LMS based on criteria",
-                additionalInfo: [
-                    { label: "Rejection Criteria", value: "Credit Score, Income Verification" },
-                    { label: "Appeal Process", value: "Available upon rejection" },
-                    { label: "Alternative Options", value: "Other financial products" }
-                ]
-            },
-            17: {
-                title: "Amount Disbursed",
-                status: "Pending",
-                time: "Pending",
-                details: "Loan amount will be disbursed after LMS approval",
-                additionalInfo: [
-                    { label: "Disbursement Method", value: "Bank Transfer" },
-                    { label: "Processing Time", value: "1-2 business days" },
-                    { label: "Expected Amount", value: "$14,500" }
-                ]
             }
         };
+
+        // Function to format JSON with syntax highlighting
+        function formatJson(jsonString) {
+            // Simple JSON formatting with syntax highlighting
+            return jsonString
+                .replace(/([{,])/g, '$1\n  ')
+                .replace(/(["}])/g, '\n$1')
+                .replace(/"([^"]+)":/g, '<span class="json-key">"$1"</span>:')
+                .replace(/: "([^"]+)"/g, ': <span class="json-string">"$1"</span>')
+                .replace(/: (true|false)/g, ': <span class="json-boolean">$1</span>')
+                .replace(/: (\d+)/g, ': <span class="json-number">$1</span>');
+        }
 
         // DOM elements
         const modalOverlay = document.getElementById('stepModal');
@@ -1334,13 +1237,22 @@
             if (step.additionalInfo && step.additionalInfo.length > 0) {
                 modalContent += `<div class="detail-item"><div class="detail-label">Additional Information</div></div>`;
                 step.additionalInfo.forEach(info => {
-                    modalContent += `
-                        <div class="detail-item" style="margin-left: 15px;">
-                            <div class="detail-label">${info.label}</div>
-                            <div class="detail-value">${info.value}</div>
-                        </div>
-                    `;
-                });
+                    if (info.isJson) {
+                        modalContent += `
+                            <div class="detail-item">
+                                <div class="detail-label">${info.label}</div>
+                                <div class="json-container">${formatJson(info.value)}</div>
+                            </div>
+                        `;
+                    } else {
+                        modalContent += `
+                            <div class="detail-item">
+                                <div class="detail-label">${info.label}</div>
+                                <div class="detail-value">${info.value}</div>
+                            </div>
+                        `;
+                    }
+                }); 
             }
             
             modalBody.innerHTML = modalContent;
